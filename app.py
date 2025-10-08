@@ -60,6 +60,11 @@ def carros():
     mensaje += '<p>En 1886, el alemán Karl Benz construyó el primer automóvil de la historia, llamado Benz Patent-Motorwagen. Este vehículo tenía tres ruedas y funcionaba con gasolina. Poco después, inventores como Gottlieb Daimler y Henry Ford mejoraron el diseño, incorporando motores más potentes y sistemas de producción en masa, lo que hizo que los autos fueran más accesibles para la población.</p>'
     mensaje += '<p>A lo largo del siglo XX, los automóviles evolucionaron rápidamente, volviéndose más veloces, seguros y cómodos,los vehículos evolucionaron para incluir características como la dirección asistida, los frenos hidráulicos y la suspensión independiente, mejorando la seguridad y el confort. Hoy en día, los autos no solo son medios de transporte, sino también símbolos de estatus y estilo de vida, con diseños innovadores y tecnologías avanzadas como la electrificación y la conducción autónoma.</p>'
     mensaje += '<p>Surgieron marcas legendarias como Ford, Chevrolet, Mercedes-Benz, Volkswagen y Rolls-Royce, que dejaron una huella importante en la historia del transporte. Los vehículos antiguos no solo representan un medio de transporte, sino también una obra de ingeniería y arte que marcó el inicio de la modernidad.</p>'
+    
+    
+    
+    
+    
     return mensaje
 
 @app.route('/dividir/<v1>/<v2>')
