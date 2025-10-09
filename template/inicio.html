@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lo que no sabías</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+<body>
+  <h1 class="text-center bg-warning-subtle mx-auto">LO QUE NO SABÍAS</h1>
+  <p class="text-center bg-primary-subtle">Inicio</p>
+
+  <div class="container bg-success-subtle mx-auto min-vh-100 d-flex flex-column">
+    <p>¿Sabías que existen animales tan exóticos que parecen sacados de otro planeta o que
+      algunos vehículos antiguos aún funcionan después de más de cien años? 🚗 </p>
+
+    <p>Aquí encontrarás información sorprendente, divertida y educativa sobre temas que te
+      dejarán con la boca abierta. Explora nuestras secciones y descubre curiosidades del mundo
+      animal, inventos únicos, autos clásicos, fenómenos naturales y mucho más. 🌍
+      ¡Anímate a navegar, aprender y sorprenderte con todo lo que tenemos preparado para ti! 💡</p>
+
+    <h2>¿Cómo funciona?</h2>
+    <p>Es muy sencillo:</p>
+    <ul>
+      <li>Ve nuestro menú</li>
+      <li>Selecciona un dato curioso favorito</li>
+      <li>Explora</li>
+    </ul>
+
+    <div class="dropdown text-center mx-auto mb-3">
+      <a class="btn btn-warning dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        MENÚ
+      </a>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="#">Inicio</a></li>
+        <li><a class="dropdown-item" href="#">Animales exóticos</a></li>
+        <li><a class="dropdown-item" href="#">Vehículos antiguos</a></li>
+        <li><a class="dropdown-item" href="#">Las maravillas del mundo</a></li>
+        <li><a class="dropdown-item" href="#">ACERCA DE...</a></li>
+      </ul>
+    </div>
+
+    <div class="row text-center">
+      <div class="col-6">
+        <img src="{{ url_for("static" , filename="img/bienv.jpeg") }}" class="rounded p-3 img-fluid" alt="bienvenido a lo que no sabías" width="300" height="200">
+      </div>
+      <div class="col-6">
+        <img src="{{ url_for("static" , filename="img/bienv.jpeg") }}" class="rounded p-3 img-fluid" alt="bienvenido a lo que no sabías" width="200" height="200">
+      </div>
+    </div>
+
+    <p class="text-center">¡Y listo! Prepárate para descubrir cosas increíbles que no sabías. 🎉</p>
+  </div>
+
+  <footer class="text-center bg-warning-subtle"> 
+    <p>Derechos reservados © 2024</p>
+  </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>
