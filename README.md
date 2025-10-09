@@ -1,1 +1,5 @@
- Dato curioso: Puede medir más de 13 metros de largo y vive en las profundidades del océano.       Curiosidad: Sus ojos son del tamaño de un balón de fútbol.# plantillas
+melanie fernanda pedroza infante
+3-d
+**tenemos que crear una pagina con varia plantillas**
+
+![my](https://github.com/user-attachments/assets/00bb44d7-2b80-4e9e-a066-6b384385dc42)
