@@ -1,7 +1,20 @@
-{%extends "base.html"%}
+{% extends "base.html"%}
 
- {% block titulo %} Hola {% endblock  %}
+ {% block titulo %} BIENVENIDOS A NUESTRA PAGINA INICIAL {% endblock  %}
 
-      {% block comtenido%}
-        <h1>Plantilla inicial</h1>
+      {% block contenido %}
+      <div class="container-fluid bg-success-subtle">
+        <h1 class="text-center">¿como se usa?</h1>
+        <ul>
+          <li>selecciona tu tema de interes en el menu</li>
+          <li>selecciona una opcion del menu</li>
+          <li>explora el contenido disponible</li>
+        </ul>
+        <p class="text-center">¡disfruta tu visita!</p>
+        <div class="text-center">
+          <img src="static/img/bienv.jpeg" alt="imagen de inicio" class="img-fluid rounded mx-auto d-block" >
+        </div>
+        
+      </div>
+
       {% endblock %}

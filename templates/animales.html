@@ -1,23 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
-    crossorigin="anonymous">
-</head>
-
-<body>
-    '<h1>Animales Exóticos</h1>
+{% extends "base.html"%}
+    {% block titulo %} ANIMALES EXÓTICOS {% endblock  %}
+    {% block contenido %}
+    <h1>Animales Exóticos</h1>
     <p>Los animales son una de las maravillas más grandes de la naturaleza. Cada uno, con sus colores, formas y
         comportamientos únicos, nos demuestra lo increíblemente diversa y hermosa que es la vida en nuestro planeta.
 
-    <h3>🌸 La Belleza del Reino Animal</h1>
+    <h3>🌸 La Belleza del Reino Animal</h3>
 
         <p> Desde los peces que iluminan las profundidades del océano hasta las aves que pintan el cielo con sus alas,
             todos los seres vivos tienen una historia que contar. 🐠🦜🐆Observarlos nos enseña a valorar la perfección
@@ -28,7 +16,7 @@
         <h3> 🦑 1. Calamar Gigante</h3>
         <p>El calamar gigante (Architeuthis dux) es una de las criaturas más misteriosas y
             fascinantes de los océanos. Aunque se ha documentado de manera limitada debido a su naturaleza esquiva y
-            habitar en profundidades extremas, se sabe que puede alcanzar longitudes impresionantes de hasta 13
+            habitar en profundidades extremas, se sabe que puede alcanzar longitudes impresionantes de hasta 13s
             metros, lo que lo convierte en uno de los invertebrados más grandes del planeta. Su cuerpo es alargado y
             flexible, y tiene unos ojos de un tamaño sorprendente, los más grandes del reino animal, con un diámetro
             que puede superar los 25 centímetros </p>
@@ -45,8 +33,8 @@
             de estudiarlo en su hábitat natural </p>
         <img src="static/cala.jpeg" alt="Calamar Gigante" width="300">
 
-        <h3> 2.El Delfín </h3>
-        <p> Nariz de Botelp>El delfín nariz de botella (Tursiops truncatus) es una de las especies de delfines más
+        <h3> 2.El Delfín Nariz de Botel </h3>
+        <p> El delfín nariz de botella (Tursiops truncatus) es una de las especies de delfines más
             conocidas y estudiadas. Se caracteriza por su hocico alargado y su inteligencia excepcional. Estos
             delfines son muy sociales y suelen vivir en grupos llamados manadas, donde establecen fuertes lazos
             entre sí.El delfín nariz de botella (Tursiops truncatus) es uno de los animales marinos más fascinantes
@@ -162,16 +150,4 @@
             embargo, enfrenta amenazas debido a la pérdida de hábitat, la caza furtiva y el envenenamiento.
             Afortunadamente, existen esfuerzos de conservación dedicados a proteger al águila real y su entorno
             natural, asegurando que futuras generaciones puedan seguir admirando a esta magnífica criatura en vuelo.
-        </p>
-        <img src="static/agi.jpeg" alt="Águila Real" width="300">
-        <h4> Hasta aqui llego esta seccion espero te haya gustado!!</h4>
-        <footer class="text-center bg-warning-subtle mx-auto">
-        <p>Derechos reservados © 2024</p>
-</footer>
-    <script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-    crossorigin="anonymous"
-    ></script>
-</body>
-</html>
+   {% endblock %}
