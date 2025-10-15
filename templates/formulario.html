@@ -1,0 +1,73 @@
+{% extends "base.html"%}
+
+{% block contenido %}
+<main class="container bg-primary-subtle mx-auto">
+    <h1 class="text-center">REGISTRATE</h1>
+    <h5 class="text-center">super rapido y facil</h5>
+    <section class="row mx-auto">
+        <form  method= "POST" action="{{ url_for('register_user') }}">
+            <div class=" row  px-3 pb-3">
+                <div class="col-6">
+                    <label for="nombre" class="form-label"></label>
+                    <input type="text" required class="form-control text-center" id="nombre" placeholder="NOMBRE">
+                </div>
+
+                <div class="col-6 ">
+                    <label for="apeido" class="form-label"></label>
+                    <input type="text" required class="form-control text-center" id="apeido" placeholder="APEIDO" value>
+                </div>
+            </div>
+            <div class="row">
+
+                <p class="col-12 p-2">Fecha de nacimiento⬤</p>
+                <div class=" row col-4 px-3 pb-5">
+                    <label for="dia" class="form-label col-4 pb-3 px-3"></label>
+                    <input type="numeric" required class="form-control text-center" id="Dia" placeholder="Dia">
+                </div>
+                <div class="row col-4 px-3 pb-5">
+                    <label for="Mes" class="form-label col-4 pb-3 px-3"></label>
+                    <input type="text" required class="form-control text-center" id="Mes" placeholder="Mes">
+                </div>
+                <div class="row col-4 px-3 pb-5">
+                    <label for="año" class="form-label col-4 pb-3 px-3"></label>
+                    <input type="numeric" required class="form-control text-center" id="año" placeholder="Año">
+                </div>
+            </div>
+            <div class="row">
+                <p class="col-12 ">Genero⬤</p>
+                <div class="form-check border rounded col-2 p-3 mb-2  bg-light">
+                    <label class="form-check-label " for="mujer">Mujer</label>
+                    <input class="form-check-input float-end" type="checkbox" required value="" id="mujer" placeholder="Mujer">
+                </div>
+
+
+                <div class="form-check border rounded col-2 p-3 mb-2  bg-light">
+                    <label class="form-check-label" for="hombre">Hombre</label>
+                    <input class="form-check-input float-end" type="checkbox" required value="" id="hombre" placeholder="Hombre">
+                </div>
+
+                <div class="form-check border rounded col-2 p-3 mb-2 px-3  bg-light">
+                    <label class="form-check-label" for="personalizado">Personalizado</label>
+                    <input class="form-check-input  float-end" type="checkbox" required value="" id="checkIndeterminate"
+                        placeholder="personalizado">
+                </div>
+            </div>
+
+            <div class="row col-12 mb-2 px-3 pb-3">
+                <label for="numero-correo" class="form-label"></label>
+                <input type="text" required class="form-control text-center" id="numero-correo"
+                    placeholder="NUMERO DE CELULAR O CORREO ELECTRONICO">
+            </div>
+            <div class="row col-12 mb-6 px-3 pb-3">
+                <label for="contraseña" class="form-label"></label>
+                <input type="text" class="form-control text-center" id="contraseña" placeholder="Contraseña nueva">
+            </div>
+        </form>
+    </section>
+    <p class="text-center">Al hacer clic en "Registrarte", aceptas nuestras Condiciones, la Política de privacidad y la
+        Política de cookies. Es posible que te enviemos notificaciones por SMS, que puedes desactivar cuando quieras</p>
+    <button type="submit" class="btn btn-primary rounded mx-auto d-block ">REGISTRARSE</button>
+    <div class="text-center"><a class="text-center" href="#" class="card-link ">¿Ya tienes una cuenta?</a></div>
+</main>
+
+{% endblock %}

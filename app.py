@@ -1,9 +1,16 @@
-from flask import Flask,render_template
+from flask import Flask,render_template,request
 app = Flask(__name__)
 
-
 @app.route('/')
-def index0():
+def index():
+    return render_template('for2.html')
+
+@app.route('/formulario.html')
+def form():
+    return render_template('formulario.html')
+
+@app.route('/inicio.html')
+def inicio():
     return render_template('inicio.html')
 
 @app.route('/animales.html')
