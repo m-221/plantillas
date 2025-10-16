@@ -5,8 +5,8 @@ app.config['SECRET_KEY'] = 'una_clave_secreta_muy_larga_dificil_de_adivinar'
 
 
 @app.route('/')
-def index():
-    return render_template('formulario')
+def formu():
+    return render_template('formulario.html')
 
 @app.route('/for2')
 def loo():
