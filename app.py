@@ -32,13 +32,13 @@ def maravillas():
 def acercas():
     return render_template('mas.html')
 
-@app.route('/' ,methods = ("GET" , "POST"))
+@app.route('/base.html' ,methods = ("GET" , "POST"))
 def registro():
     error= None
     if request.method == "POST":
         nombrecompleto = request.form["nombre"]
-        CORREO= request.form ["email"]
-        password =request.form ["contraseña"]
+        CORREO= request.form ["exampleInputEmail1"]
+        password =request.form ["exampleInputPassword1"]
         fecha =request.form ["dia"]
         fecha =request.form ["mes"]
         fecha=request.form ["año"]
@@ -49,11 +49,11 @@ def registro():
         if password != contraseña:
             error = "lacontraseña no coincide"
         if error != None:
-            flash(eroor)
+            flash(error)
             return render_template('formulario.html')
         else:
             (f"!registro exitoso! : {nombrecompleto}!")
-            return render_template('base.html')
+            return render_template('formulario.html')
         
 
 if __name__ == '__main__':

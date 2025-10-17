@@ -10,12 +10,12 @@
             <div class=" row  px-3 pb-3">
                 <div class="col-6">
                     <label for="nombre" class="form-label"></label>
-                    <input type="text" required class="form-control text-center" id="nombre" name="nombre" placeholder="NOMBRE" minlength="3" maxlength="20">
+                    <input type="text" required class="form-control text-center" id="nombre" name="nombre" placeholder="NOMBRE" minlength="3" maxlength="20" pattern="^[a-zA-Z]+$">
                 </div>
 
                 <div class="col-6 ">
                     <label for="apeido" class="form-label"></label>
-                    <input type="text" required class="form-control text-center" id="apeido" name="apeido" placeholder="APEIDO" value>
+                    <input type="text" required class="form-control text-center" id="apeido" name="apeido" placeholder="APEIDO" minlength="3" maxlength="20" pattern="^[a-zA-Z]+$">
                 </div>
             </div>
             <div class="row">
@@ -38,37 +38,39 @@
                 <p class="col-12 ">Genero⬤</p>
                 <div class="form-check border rounded col-2 p-3 mb-2  bg-light">
                     <label class="form-check-label " for="mujer">Mujer</label>
-                    <input class="form-check-input float-end" type="checkbox" required value="" id="mujer"  name="mujer"placeholder="Mujer">
+                    <input class="form-check-input float-end" type="checkbox"  value="{{request.form.get(mujer,'')}}" id="mujer"  name="mujer"placeholder="Mujer">
                 </div>
-
 
                 <div class="form-check border rounded col-2 p-3 mb-2  bg-light">
                     <label class="form-check-label" for="hombre">Hombre</label>
-                    <input class="form-check-input float-end" type="checkbox" required value="" id="hombre" name="hombre" placeholder="Hombre">
+                    <input class="form-check-input float-end" type="checkbox"  value="" id="hombre" name="hombre" placeholder="Hombre">
                 </div>
 
                 <div class="form-check border rounded col-2 p-3 mb-2 px-3  bg-light">
                     <label class="form-check-label" for="personalizado">Personalizado</label>
-                    <input class="form-check-input  float-end" type="checkbox" required value="" id="checkIndeterminate" name="checkIndeterminate"
+                    <input class="form-check-input  float-end" type="checkbox"  value="" id="checkIndeterminate" name="checkIndeterminate"
                         placeholder="personalizado">
                 </div>
             </div>
 
             <div class="row col-12 mb-2 px-3 pb-3">
-                <label for="Email" class="form-label"></label>
-                <input type="text" required class="form-control text-center" id="Email" name="Email"
-                    placeholder="Email">
+                <label for="exampleInputEmail1" class="form-label"></label>
+                <input type="emailHelp" required class="form-control text-center" id="exampleInputEmail1" name="exampleInputEmail1"
+                    placeholder="Email" pattern=" [a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
             </div>
             <div class="row col-12 mb-6 px-3 pb-3">
-                <label for="contraseña" class="form-label"></label>
-                <input type="text" class="form-control text-center" id="contraseña"   name="contraseña" placeholder="Contraseña nueva">
+                <label for="exampleInputPassword1" class="form-label"></label>
+                <input type="password" class="form-control text-center" id="exampleInputPassword1"   name="exampleInputPassword1" placeholder="Contraseña nueva"  pattern="[a-zA-Z._-]{8,}" title="debe contener al menos 8 caracteres,minusculas,mayusculas,puntos.">
             </div> 
+            <p class="text-center">Al hacer clic en "Registrarte", aceptas nuestras Condiciones, la Política de privacidad y la
+        Política de cookies. Es posible que te enviemos notificaciones por SMS, que puedes desactivar cuando quieras</p>
+        
+            <button type="submit" class="btn btn-primary rounded mx-auto d-block ">REGISTRARSE</button>
+    <div class="text-center"><a class="text-center" href="#" class="card-link ">¿Ya tienes una cuenta?</a></div>
         </form>
     </section>
-    <p class="text-center">Al hacer clic en "Registrarte", aceptas nuestras Condiciones, la Política de privacidad y la
-        Política de cookies. Es posible que te enviemos notificaciones por SMS, que puedes desactivar cuando quieras</p>
-    <button type="submit" class="btn btn-primary rounded mx-auto d-block ">REGISTRARSE</button>
-    <div class="text-center"><a class="text-center" href="#" class="card-link ">¿Ya tienes una cuenta?</a></div>
+    
+
 </main>
 
 {% endblock %}

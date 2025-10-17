@@ -8,11 +8,11 @@
     </div>
     <div class="mb-3">
         <label for="exampleInputPassword1" class="form-label">contraseña</label>
-        <input type="password" required class="form-control" id="exampleInputPassword1" minlength="3"  maxlength="20">
+        <input type="password" required class="form-control" id="exampleInputPassword1" minlength="3"  maxlength="20" >
     </div>
     <div class="mb-3 form-check">
-        <input type="checkbox" required class="form-check-input" id="exampleCheck1"  name="exampleCheck1"  minlength="3"  maxlength="20">
-        <label class="form-check-label" for="exampleCheck1">ver contraseña</label>
+        <input type="checkbox" required class="form-check-input" id="exampleCheck1"  name="exampleCheck1"  minlength="3"  maxlength="20" pattern="(?=.*[a-z]) (?=.*[A-Z]) .{8,}" title="debe contener al menos 8 caracteres,minusculas,mayusculas,puntos.">
+        <label class="form-check-label" for="exampleCheck1">ver </label>
     </div>
     <button type="submit" class="btn btn-primary">registrar</button>
 </form>
