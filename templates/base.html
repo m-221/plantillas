@@ -12,13 +12,14 @@
     />
   </head>
   <body>
-    <h1 class="text-center bg-warning-subtle mx-auto">
-      {% block titulo %} BIENVENIDOS A NUESTRA PAGINA {% endblock  %}
-    </h1>
-    <p class="text-center">Descubre mas sobre temas de interes</p>
+    <div class="container-fluid bg-warning-subtle text-center ">
+      {% block titulo %}<h1  >BIENVENIDOS A NUESTRA PAGINA</h1>{% endblock  %}
+    </div>
+  
+      {% block subtitulo %}<p class="text-center">Descubre mas sobre temas de interes</p>{% endblock  %}
     <div class="dropdown text-center mx-auto mb-3">
       <a
-        class="btn btn-warning dropdown-toggle"
+        class="btn btn-danger-subtle dropdown-toggle"
         href="#"
         role="button"
         data-bs-toggle="dropdown"
@@ -30,10 +31,12 @@
         <li><a class="dropdown-item" href="/animales.html">Animales exóticos</a></li>
         <li><a class="dropdown-item" href="/vehiculos.html">Vehículos antiguos</a></li>
         <li><a class="dropdown-item" href="/maravillas">Las maravillas del mundo</a></li>
-        <li><a class="dropdown-item" href="/acercas.html">ACERCA DE...</a></li>
-        <li><a class="dropdown-item" href="/formulario.html">formulario</a></li>
+        <li><a class="dropdown-item" href="/acercas">ACERCA DE...</a></li>
+        <li><a class="dropdown-item" href="/formulario">formulario</a></li>
+        <li><a class="dropdown-item" href="/for2">formulario2</a></li>
       </ul>
     </div>
+    
     <section>
       {% block contenido%}
       {% endblock %}

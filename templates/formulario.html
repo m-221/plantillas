@@ -1,7 +1,8 @@
 {% extends "base.html"%}
 
 {% block contenido %}
-{% block titulo %}NUEVO REGISTRO{% endblock %}
+{% block titulo %}<h1 class="text-center">NUEVO REGISTRO</h1>{% endblock %}
+{% block subtitulo %}{% endblock %}
 <main class="container bg-primary-subtle mx-auto">
     <h1 class="text-center">REGISTRATE</h1>
     <h5 class="text-center">super rapido y facil</h5>
@@ -21,19 +22,108 @@
             <div class="row">
 
                 <p class="col-12 p-2">Fecha de nacimiento⬤</p>
-                <div class=" row col-4 px-3 pb-5">
-                    <label for="dia" class="form-label col-4 pb-3 px-3"></label>
-                    <input type="numeric" required class="form-control text-center" id="Dia"  name="Dia" placeholder="Dia">
-                </div>
-                <div class="row col-4 px-3 pb-5">
-                    <label for="Mes" class="form-label col-4 pb-3 px-3"></label>
-                    <input type="text" required class="form-control text-center" id="Mes" name="Mes" placeholder="Mes">
-                </div>
-                <div class="row col-4 px-3 pb-5">
-                    <label for="año" class="form-label col-4 pb-3 px-3"></label>
-                    <input type="numeric" required class="form-control text-center" id="año" name="año"  placeholder="Año">
-                </div>
-            </div>
+              <form>
+  <label for="dia">Día:</label>
+  <select id="dia" name="dia">
+  
+    <option value="">Día</option>
+  
+    <option>1</option>
+    <option>2</option>
+    <option>3</option>
+    <option>4</option>
+    <option>5</option>
+    <option>6</option>
+    <option>7</option>
+    <option>8</option>
+    <option>9</option>
+    <option>10</option>
+    <option>11</option>
+    <option>12</option>
+    <option>13</option>
+    <option>14</option>
+    <option>15</option>
+    <option>16</option>
+    <option>17</option>
+    <option>18</option>
+    <option>19</option>
+    <option>20</option>
+    <option>21</option>
+    <option>22</option>
+    <option>23</option>
+    <option>24</option>
+    <option>25</option>
+    <option>26</option>
+    <option>27</option>
+    <option>28</option>
+    <option>29</option>
+    <option>30</option>
+    <option>31</option>
+  </select>
+
+  <label for="mes">Mes:</label>
+  <select id="mes" name="mes">
+    <option value="">Mes</option>
+    <option value="1">Enero</option>
+    <option value="2">Febrero</option>
+    <option value="3">Marzo</option>
+    <option value="4">Abril</option>
+    <option value="5">Mayo</option>
+    <option value="6">Junio</option>
+    <option value="7">Julio</option>
+    <option value="8">Agosto</option>
+    <option value="9">Septiembre</option>
+    <option value="10">Octubre</option>
+    <option value="11">Noviembre</option>
+    <option value="12">Diciemb re</option>
+  </select>
+
+  <label for="añio">Año:</label>
+  <select id="añio" name="añio">
+
+    <option> 1986</option>
+     <option> 1987</option>
+      <option>1988</option>
+       <option>1989</option>
+        <option>1990</option>
+    <option>1991</option>
+     <option>1992</option>
+   <option> 1993</option>
+   <option>1994</option>
+     <option>1995</option>
+    <option>1996</option>
+    <option>1997</option>
+    <option>1998</option>
+    <option>1999</option>
+    <option>2000</option>
+    <option>2001</option>
+    <option>2002</option>
+    <option>2003</option>
+    <option>2004</option>
+    <option>2005</option>
+    <option>2006</option>
+    <option>2007</option>
+    <option>2008</option>
+    <option>2009</option>
+    <option>2010</option>
+    <option>2011</option>
+    <option>2012</option>
+    <option>2013</option>
+    <option>2014</option>
+    <option>2015</option>
+    <option>2016</option>
+    <option>2017</option>
+    <option>2018</option>
+    <option>2019</option>
+    <option>2020</option>
+    <option>2021</option>
+    <option>2022</option>
+    <option>2023</option>
+    <option>2024</option>
+    <option>2025</option>
+  </select>
+</form>
+
             <div class="row">
                 <p class="col-12 ">Genero⬤</p>
                 <div class="form-check border rounded col-2 p-3 mb-2  bg-light">
@@ -66,7 +156,7 @@
         Política de cookies. Es posible que te enviemos notificaciones por SMS, que puedes desactivar cuando quieras</p>
         
             <button type="submit" class="btn btn-primary rounded mx-auto d-block ">REGISTRARSE</button>
-    <div class="text-center"><a class="text-center" href="#" class="card-link ">¿Ya tienes una cuenta?</a></div>
+    <div class="text-center"><a class="text-center" href="/for2" class="card-link ">¿Ya tienes una cuenta?</a></div>
         </form>
     </section>
     

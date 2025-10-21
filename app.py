@@ -5,16 +5,20 @@ app.config['SECRET_KEY'] = 'una_clave_secreta_muy_larga_dificil_de_adivinar'
 
 
 @app.route('/')
-def formu():
-    return render_template('formulario.html')
+def index():
+    return render_template('base.html')
+
+@app.route('/inicio')
+def inicio():
+    return render_template('inicio.html')
 
 @app.route('/for2')
 def loo():
     return render_template('for2.html')
 
-@app.route('/inicio.html')
-def inicio():
-    return render_template('inicio.html')
+@app.route('/formulario')
+def formulario():
+    return render_template('formulario.html')
 
 @app.route('/animales.html')
 def animales():
@@ -24,36 +28,39 @@ def animales():
 def vehiculos():
     return render_template('vehiculos.html')
 
-@app.route('/maravillas.html')
+@app.route('/maravillas')
 def maravillas():
     return render_template('maravillas.html')
 
-@app.route('/acercas.html')
+@app.route('/acercas')
 def acercas():
     return render_template('mas.html')
 
-@app.route('/base.html' ,methods = ("GET" , "POST"))
+
+
+@app.route('/formulario', methods=("GET", "POST"))
 def registro():
-    error= None
+    error = None
     if request.method == "POST":
-        nombrecompleto = request.form["nombre"]
-        CORREO= request.form ["exampleInputEmail1"]
-        password =request.form ["exampleInputPassword1"]
-        fecha =request.form ["dia"]
-        fecha =request.form ["mes"]
-        fecha=request.form ["año"]
-        genero =request.form ["hombre"]
-        genero =request.form ["mujer"]
-        genero =request.form ["personalizado"]
-        
-        if password != contraseña:
-            error = "lacontraseña no coincide"
-        if error != None:
+      
+        email = request.form.get("exampleInputEmail1")
+        password = request.form.get("exampleInputPassword1")
+        confirmar = request.form.get("exampleCheck1")
+
+      
+        if not email or not password or not confirmar:
+            error = "Todos los campos son obligatorios"
+
+        if error:
             flash(error)
             return render_template('formulario.html')
         else:
-            (f"!registro exitoso! : {nombrecompleto}!")
-            return render_template('formulario.html')
+          
+            flash("¡Registro exitoso!")
+            return redirect(url_for('/inicio'))
+
+    return render_template('formulario.html')
+
         
 
 if __name__ == '__main__':

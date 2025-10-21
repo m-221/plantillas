@@ -1,6 +1,8 @@
 {% extends "base.html"%}
 {% block contenido %}
-<form>
+{% block titulo %} <h1>INICIA SESIÓN</h1> {% endblock %}
+{% block subtitulo %}{% endblock %}
+ <form action="/base" method="POST">
     <div class="mb-3">
         <label for="exampleInputEmail1" class="form-label">Email </label>
         <input type="email"required class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
@@ -8,12 +10,14 @@
     </div>
     <div class="mb-3">
         <label for="exampleInputPassword1" class="form-label">contraseña</label>
-        <input type="password" required class="form-control" id="exampleInputPassword1" minlength="3"  maxlength="20" >
+        <input type="password" required class="form-control" id="exampleInputPassword1"  minlength="8"  maxlength="20" pattern="[a-zA-Z._-]{8,}" title="debe contener al menos 8 caracteres,minusculas,mayusculas,puntos.">
     </div>
     <div class="mb-3 form-check">
-        <input type="checkbox" required class="form-check-input" id="exampleCheck1"  name="exampleCheck1"  minlength="3"  maxlength="20" pattern="(?=.*[a-z]) (?=.*[A-Z]) .{8,}" title="debe contener al menos 8 caracteres,minusculas,mayusculas,puntos.">
-        <label class="form-check-label" for="exampleCheck1">ver </label>
+        <input type="checkbox" required class="form-check-input" id="exampleCheck1"  name="exampleCheck1" >
+        <label class="form-check-label" for="exampleCheck1">confirmar</label>
     </div>
-    <button type="submit" class="btn btn-primary">registrar</button>
+        <button type="submit" class="btn btn-primary">INGRESAR</button>
 </form>
+
+
 {% endblock %}
