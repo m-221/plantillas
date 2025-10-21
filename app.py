@@ -13,7 +13,7 @@ def inicio():
     return render_template('inicio.html')
 
 @app.route('/for2')
-def loo():
+def loo():mmmm
     return render_template('for2.html')
 
 @app.route('/formulario')
