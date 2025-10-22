@@ -1,8 +1,8 @@
 {% extends "base.html"%}
-
-{% block contenido %}
 {% block titulo %}<h1 class="text-center">NUEVO REGISTRO</h1>{% endblock %}
 {% block subtitulo %}{% endblock %}
+{% block contenido %}
+
 <main class="container bg-primary-subtle mx-auto">
     <h1 class="text-center">REGISTRATE</h1>
     <h5 class="text-center">super rapido y facil</h5>
@@ -22,12 +22,10 @@
             <div class="row">
 
                 <p class="col-12 p-2">Fecha de nacimiento⬤</p>
-              <form>
-  <label for="dia">Día:</label>
-  <select id="dia" name="dia">
-  
+<div class="container col-4 px-4">
+<label for="dia">Día:</label>
+<select id="dia" name="dia">
     <option value="">Día</option>
-  
     <option>1</option>
     <option>2</option>
     <option>3</option>
@@ -60,7 +58,8 @@
     <option>30</option>
     <option>31</option>
   </select>
-
+  </div>
+  <div class="container col-4 px-4">
   <label for="mes">Mes:</label>
   <select id="mes" name="mes">
     <option value="">Mes</option>
@@ -75,22 +74,22 @@
     <option value="9">Septiembre</option>
     <option value="10">Octubre</option>
     <option value="11">Noviembre</option>
-    <option value="12">Diciemb re</option>
-  </select>
-
-  <label for="añio">Año:</label>
-  <select id="añio" name="añio">
-
+    <option value="12">Diciembre</option>
+    </select>
+    </div>
+    <div class="container col-4 px-5">
+    <label for="anio">Año:</label>
+    <select id="anio" name="anio">
     <option> 1986</option>
-     <option> 1987</option>
-      <option>1988</option>
-       <option>1989</option>
-        <option>1990</option>mmmmmmmmmmmmmmmmmmmmmm
+    <option> 1987</option>
+    <option>1988</option>
+    <option>1989</option>
+    <option>1990</option>
     <option>1991</option>
-     <option>1992</option>
-   <option> 1993</option>
-   <option>1994</option>
-     <option>1995</option>
+    <option>1992</option>
+    <option>1993</option>
+    <option>1994</option>
+    <option>1995</option>
     <option>1996</option>
     <option>1997</option>
     <option>1998</option>
@@ -121,9 +120,8 @@
     <option>2023</option>
     <option>2024</option>
     <option>2025</option>
-  </select>
-</form>
-
+</select>
+</div>
             <div class="row">
                 <p class="col-12 ">Genero⬤</p>
                 <div class="form-check border rounded col-2 p-3 mb-2  bg-light">
