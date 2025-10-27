@@ -17,33 +17,50 @@
     </div>
   
       {% block subtitulo %}<p class="text-center">Descubre mas sobre temas de interes</p>{% endblock  %}
-    <div class="dropdown text-center mx-auto mb-3">
-      <a
-        class="btn btn-danger-subtle dropdown-toggle"
-        href="#"
-        role="button"
-        data-bs-toggle="dropdown"
-        aria-expanded="false">
-        MENÚ
-      </a>
-      <ul class="dropdown-menu">
-        <li><a class="dropdown-item" href="/">Inicio</a></li>
-        <li><a class="dropdown-item" href="/animales.html">Animales exóticos</a></li>
-        <li><a class="dropdown-item" href="/vehiculos.html">Vehículos antiguos</a></li>
-        <li><a class="dropdown-item" href="/maravillas">Las maravillas del mundo</a></li>
-        <li><a class="dropdown-item" href="/acercas">ACERCA DE...</a></li>
-        <li><a class="dropdown-item" href="/formulario">formulario</a></li>
-        <li><a class="dropdown-item" href="/for2">formulario2</a></li>
+     
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container">
+    <a class="navbar-brand text-danger-subtle" href="#">MENU</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/">inicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/vehiculos.html">vehiculos exoticos</a>
+        </li>
+         <li class="nav-item">
+          <a class="nav-link" href="/animales.html">animales exoticos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/maravillas">7 maravillas del mundo</a>
+        </li>
+          <li class="nav-item">
+          <a class="nav-link" href="/acercas">acerca de...</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/for2">inicio de seccion</a>
+        </li>
+         <li class="nav-item">
+          <a class="nav-link" href="#">cierre de seccion</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/formulario">registro</a>
+        </li>
       </ul>
     </div>
-    
-    <section>
+</nav>
+
+<section>
       {% block contenido%}
       {% endblock %}
     </section>  
-<footer class="text-center bg-warning-subtle mx-auto">
-        <p>Derechos reservados © 2024</p>
-</footer>
+  {% block pie %}
+<footer class="text-center bg-warning-subtle mx-auto"><p>Derechos reservados © 2024</p></footer>
+{% endblock %}
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
@@ -51,3 +68,5 @@
     ></script>
   </body>
 </html>
+
+   

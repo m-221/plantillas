@@ -3,11 +3,10 @@
 {% block subtitulo %}{% endblock %}
 {% block contenido %}
 
-<main class="container bg-primary-subtle mx-auto">
-    <h1 class="text-center">REGISTRATE</h1>
-    <h5 class="text-center">super rapido y facil</h5>
-    <section class="row mx-auto">
-        <form  method= "POST" action="/registro">
+<main class="container d-flex justify-content-center align-items-center rounded-4">
+    <h5 class="text-center"></h5>
+    <section class="row card shadow p-4 rounded-4 m-4 bg-success-subtle">
+        <form  method= "POST" action="/">
             <div class=" row  px-3 pb-3">
                 <div class="col-6">
                     <label for="nombre" class="form-label"></label>
@@ -22,7 +21,7 @@
             <div class="row">
 
                 <p class="col-12 p-2">Fecha de nacimiento⬤</p>
-<div class="container col-4 px-4">
+<div class="container col-2 px-2">
 <label for="dia">Día:</label>
 <select id="dia" name="dia">
     <option value="">Día</option>
@@ -59,7 +58,7 @@
     <option>31</option>
   </select>
   </div>
-  <div class="container col-4 px-4">
+  <div class="container col-2 px-2">
   <label for="mes">Mes:</label>
   <select id="mes" name="mes">
     <option value="">Mes</option>
@@ -77,9 +76,66 @@
     <option value="12">Diciembre</option>
     </select>
     </div>
-    <div class="container col-4 px-5">
+    <div class="container col-2 px-2">
     <label for="anio">Año:</label>
     <select id="anio" name="anio">
+    <option value="">Año</option>
+    <option> 1930</option>
+    <option> 1931</option>
+    <option> 1932</option>
+    <option> 1933</option>
+    <option> 1934</option>
+    <option> 1935</option>
+    <option> 1936</option>
+    <option> 1937</option>
+    <option> 1938</option>
+    <option> 1939</option>
+    <option> 1940</option>
+    <option> 1941</option>
+    <option> 1942</option>
+    <option> 1943</option>
+    <option> 1944</option>
+    <option> 1945</option>
+    <option> 1946</option>
+    <option> 1947</option>
+    <option> 1948</option>
+    <option> 1949</option>
+    <option> 1950</option>
+    <option> 1951</option>
+    <option> 1952</option>
+    <option> 1953</option>
+    <option> 1954</option>
+    <option> 1955</option>
+    <option> 1956</option>
+    <option> 1957</option>
+    <option> 1958</option>
+    <option> 1959</option>
+    <option> 1960</option>
+    <option> 1961</option>
+    <option> 1962</option>
+    <option> 1963</option>
+    <option> 1964</option>
+    <option> 1965</option>
+    <option> 1966</option>
+    <option> 1967</option>
+    <option> 1968</option>
+    <option> 1969</option>
+    <option> 1970</option>
+    <option> 1971</option>
+    <option> 1972</option>
+    <option> 1973</option>
+    <option> 1974</option>
+    <option> 1975</option>
+    <option> 1976</option>
+    <option> 1977</option>
+    <option> 1978</option>
+    <option> 1979</option>
+    <option> 1980</option>
+    <option> 1981</option>
+    <option> 1982</option>
+    <option> 1983</option>
+    <option> 1984</option>
+    <option> 1985</option>
     <option> 1986</option>
     <option> 1987</option>
     <option>1988</option>
@@ -122,21 +178,21 @@
     <option>2025</option>
 </select>
 </div>
-            <div class="row">
-                <p class="col-12 ">Genero⬤</p>
-                <div class="form-check border rounded col-2 p-3 mb-2  bg-light">
+            <div class=" row d-flex justify-content-between gap-3 ">
+                <p class="col-12 p-2">Genero⬤</p>
+                <div class=" form-check border rounded p-3 col-2 bg-light flex-fill text-center  bg-light">
                     <label class="form-check-label " for="mujer">Mujer</label>
-                    <input class="form-check-input float-end" type="checkbox"  value="{{request.form.get(mujer,'')}}" id="mujer"  name="mujer"placeholder="Mujer">
+                    <input class="form-check-input float-end" type="radio"  value="{{request.form.get(mujer,'')}}" id="mujer"  name="genero"placeholder="Mujer">
                 </div>
 
-                <div class="form-check border rounded col-2 p-3 mb-2  bg-light">
+                <div class="form-check border rounded p-3 col-2 bg-light flex-fill text-center  bg-light">
                     <label class="form-check-label" for="hombre">Hombre</label>
-                    <input class="form-check-input float-end" type="checkbox"  value="" id="hombre" name="hombre" placeholder="Hombre">
+                    <input class="form-check-input float-end" type="radio"  value="" id="hombre" name="genro" placeholder="Hombre">
                 </div>
 
-                <div class="form-check border rounded col-2 p-3 mb-2 px-3  bg-light">
+                <div class="form-check border rounded p-3 col-2 bg-light flex-fill text-center  bg-light">
                     <label class="form-check-label" for="personalizado">Personalizado</label>
-                    <input class="form-check-input  float-end" type="checkbox"  value="" id="checkIndeterminate" name="checkIndeterminate"
+                    <input class="form-check-input  float-end" type="radio"  value="" id="checkIndeterminate" name="genero"
                         placeholder="personalizado">
                 </div>
             </div>

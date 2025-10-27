@@ -1,4 +1,4 @@
-from flask import Flask,render_template,request,redirect,url_for,flash
+from flask import Flask,render_template,request,redirect,url_for,flash,session
 app = Flask(__name__)
 
 app.config['SECRET_KEY'] = 'una_clave_secreta_muy_larga_dificil_de_adivinar'
@@ -43,9 +43,10 @@ def registro():
         email = request.form.get("exampleInputEmail1")
         password = request.form.get("exampleInputPassword1")
         confirmar = request.form.get("exampleCheck1")
+        fecha = request.form.get("ano,mes,dia")
+        genero = request.form.get("mujer,hombre,personalizado")
 
-    
-        if not email or not password or not confirmar:
+        if not email or not password or not confirmar or not fecha or not genero:
             error = "Todos los campos son obligatorios"
 
         if error:
