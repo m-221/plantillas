@@ -54,15 +54,12 @@ def registro():
         dia = request.form.get("dia")
         genero = request.form.get("genero")
 
-    if not email or not password or not confirmar or not ano or not mes or not dia or not genero:
-         error = "Todos los campos son obligatorios"
-
     if error:
         flash(error)
         return render_template('formulario.html')
     else:
         flash("¡Registro exitoso!")
-        return redirect(url_for('inicio'))
+        return redirect(url_for('index'))
         
     
 @app.route('/login', methods=("GET", "POST"))
@@ -73,18 +70,19 @@ def login():
 
     if not email or not password:
         error = "Todos los campos son obligatorios"
+        return redirect(url_for('index'))
     
     if email not in usuarios_registrados: 
         flash("Correo incorrecto")
-        return redirect(url_for('for2'))
+        return redirect(url_for('index'))
 
     if usuarios_registrados[email]['password'] != password:
         flash("Contraseña incorrecta")
-        return redirect(url_for('for2'))
-
-    session['username'] = usuarios_registrados[email]['username']
-    session['logueado'] = True
-    return redirect(url_for('inicio'))
+        return redirect(url_for('index'))
+    if usuarios_registrados[email]['password'] == password:
+        session['username'] = usuarios_registrados[email]['username']
+        session['logueado'] = True
+        return redirect(url_for('inicio'))
     
 
 @app.route('/inicio')
