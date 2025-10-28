@@ -1,5 +1,6 @@
 from flask import Flask,render_template,request,redirect,url_for,flash,session
 app = Flask(__name__)
+usuarios_registrados = {}
 
 app.config['SECRET_KEY'] = 'una_clave_secreta_muy_larga_dificil_de_adivinar'
 
@@ -58,8 +59,35 @@ def registro():
             return redirect(url_for('/inicio'))
 
     return render_template('formulario.html')
+@app.route('/login', methods=("GET", "POST"))
+def login():
+    error = None
+    if request.method == "POST":
+        email = request.form.get("exampleInputEmail1")
+        password = request.form.get("exampleInputPassword1")
 
-        
+        if not email or not password:
+            error = "Todos los campos son obligatorios"
+
+        if error:
+            flash(error)
+            return render_template('inicio.html')
+        else:
+            flash("¡Inicio de sesión exitoso!")
+            return redirect(url_for('index'))
+
+    return render_template('inicio.html')
+
+@app.route('/logout')
+def logout():
+    flash("Has cerrado sesión correctamente.")
+    return redirect(url_for('/inicio'))
+@app.route('/profile')
+def profile():
+    username = session.get('username')
+    if username is not None:
+        return 'user: ' + username
+    return 'not logged in'
 
 if __name__ == '__main__':
     app.run(debug=True)
