@@ -6,7 +6,7 @@
 <main class="container d-flex justify-content-center align-items-center rounded-4">
     <h5 class="text-center"></h5>
     <section class="row card shadow p-4 rounded-4 m-4 bg-success-subtle">
-        <form  method= "POST" action="/">
+        <form  method= "POST" action="/registro">
             <div class=" row  px-3 pb-3">
                 <div class="col-6">
                     <label for="nombre" class="form-label"></label>
@@ -182,17 +182,17 @@
                 <p class="col-12 p-2">Genero⬤</p>
                 <div class=" form-check border rounded p-3 col-2 bg-light flex-fill text-center  bg-light">
                     <label class="form-check-label " for="mujer">Mujer</label>
-                    <input class="form-check-input float-end" type="radio"  value="{{request.form.get(mujer,'')}}" id="mujer"  name="genero"placeholder="Mujer">
+                    <input class="form-check-input float-end" type="radio"  value="Mujer" id="mujer"  name="genero"placeholder="Mujer">
                 </div>
 
                 <div class="form-check border rounded p-3 col-2 bg-light flex-fill text-center  bg-light">
                     <label class="form-check-label" for="hombre">Hombre</label>
-                    <input class="form-check-input float-end" type="radio"  value="" id="hombre" name="genro" placeholder="Hombre">
+                    <input class="form-check-input float-end" type="radio"  value="Hombre" id="hombre" name="genero" placeholder="Hombre">
                 </div>
 
                 <div class="form-check border rounded p-3 col-2 bg-light flex-fill text-center  bg-light">
                     <label class="form-check-label" for="personalizado">Personalizado</label>
-                    <input class="form-check-input  float-end" type="radio"  value="" id="checkIndeterminate" name="genero"
+                    <input class="form-check-input  float-end" type="radio"  value="Personalizado" id="checkIndeterminate" name="genero"
                         placeholder="personalizado">
                 </div>
             </div>
@@ -212,6 +212,7 @@
             <button type="submit" class="btn btn-primary rounded mx-auto d-block ">REGISTRARSE</button>
     <div class="text-center"><a class="text-center" href="/for2" class="card-link ">¿Ya tienes una cuenta?</a></div>
     <div class="container mt-4">
+
     {% with messages = get_flashed_messages(with_categories=True) %}
         {% if messages %}
             {% for category, message in messages %}

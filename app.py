@@ -1,6 +1,12 @@
 from flask import Flask,render_template,request,redirect,url_for,flash,session
 app = Flask(__name__)
-usuarios_registrados = {}
+usuarios_registrados = {
+     'admin@gmail.com': { 
+            'password': 'admin123',
+            'username': 'admin',
+            'fecha': '2000-01-01'
+     }
+}
 
 app.config['SECRET_KEY'] = 'una_clave_secreta_muy_larga_dificil_de_adivinar'
 
@@ -40,43 +46,59 @@ def acercas():
 def registro():
     error = None
     if request.method == "POST":
-    
         email = request.form.get("exampleInputEmail1")
         password = request.form.get("exampleInputPassword1")
         confirmar = request.form.get("exampleCheck1")
-        fecha = request.form.get("ano,mes,dia")
-        genero = request.form.get("mujer,hombre,personalizado")
+        ano = request.form.get("ano")
+        mes = request.form.get("mes")
+        dia = request.form.get("dia")
+        genero = request.form.get("genero")
 
-        if not email or not password or not confirmar or not fecha or not genero:
-            error = "Todos los campos son obligatorios"
+    if not email or not password or not confirmar or not ano or not mes or not dia or not genero:
+         error = "Todos los campos son obligatorios"
 
-        if error:
-            flash(error)
-            return render_template('formulario.html')
-        else:
+    if error:
+        flash(error)
+        return render_template('formulario.html')
+    else:
+        flash("¡Registro exitoso!")
+        return redirect(url_for('inicio'))
+        
     
-            flash("¡Registro exitoso!")
-            return redirect(url_for('/inicio'))
-
-    return render_template('formulario.html')
 @app.route('/login', methods=("GET", "POST"))
 def login():
-    error = None
     if request.method == "POST":
         email = request.form.get("exampleInputEmail1")
         password = request.form.get("exampleInputPassword1")
 
-        if not email or not password:
-            error = "Todos los campos son obligatorios"
+    if not email or not password:
+        error = "Todos los campos son obligatorios"
+    
+    if email not in usuarios_registrados: 
+        flash("Correo incorrecto")
+        return redirect(url_for('for2'))
 
-        if error:
-            flash(error)
-            return render_template('inicio.html')
-        else:
-            flash("¡Inicio de sesión exitoso!")
-            return redirect(url_for('index'))
+    if usuarios_registrados[email]['password'] != password:
+        flash("Contraseña incorrecta")
+        return redirect(url_for('for2'))
 
-    return render_template('inicio.html')
+    session['username'] = usuarios_registrados[email]['username']
+    session['logueado'] = True
+    return redirect(url_for('inicio'))
+    
+
+@app.route('/inicio')
+def inicio():
+    if session.get('logueado')==True:
+        session.crear()
+        return render_template('inicio.html')
+    
+    if session.get('username'):
+        flash("Ya has iniciado sesión")
+        return redirect(url_for('index'))
+    return
+
+   
 
 @app.route('/logout')
 def logout():
